@@ -51,7 +51,7 @@ namespace BIBLIO
             {
                 if (String.Equals(cbxUser.Text.ToUpper(), matrix[i, 1].ToUpper()))
                 {
-                    if (String.Equals(txtPassword.Text, matrix[i, 3]))
+                    if (String.Equals(h.EncriptedPassword_MD5(txtPassword.Text), matrix[i, 3]))
                     {
                         this.Hide();
                         Form1 f1 = new Form1();
@@ -67,6 +67,7 @@ namespace BIBLIO
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            
             Avtorization();
         }
 
@@ -86,6 +87,7 @@ namespace BIBLIO
                 Application.Exit();
             }
         }
+
     }
     static class h
     {
@@ -93,6 +95,36 @@ namespace BIBLIO
         public static string typeUser { get; set; }
         public static string nameUser { get; set; }
         public static BindingSource bs1 { get; set; }
+        public static string EncriptedPassword_MD5(string s)
+        {
+            if (string.Compare(s, "null", true) == 0)
+                return "HULL";
+            byte[] bytes = Encoding.Unicode.GetBytes(s);
+            MD5CryptoServiceProvider CSP = new MD5CryptoServiceProvider();
+            byte[] byteHach = CSP.ComputeHash(bytes);
+            string hash = string.Empty;
+            foreach (byte b in byteHach)
+                hash += String.Format("{0:x2}", b);
+
+
+            return hash;
+        }
+        public static string EncriptedPassword_SHA156(string s)
+        {
+           
+
+
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(s));
+                StringBuilder stringbuilder = new StringBuilder();
+                for(int i = 0; i < bytes.Length; i++)
+                {
+                    stringbuilder.Append(bytes[i].ToString("x2"));
+                }
+                return stringbuilder.ToString();
+            }
+        }
         public static DataTable myfunDt(string commandString)
         {
             DataTable dt = new DataTable();

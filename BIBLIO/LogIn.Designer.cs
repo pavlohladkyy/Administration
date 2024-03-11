@@ -66,7 +66,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(112, 197);
+            this.btnOk.Location = new System.Drawing.Point(82, 213);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(113, 23);
             this.btnOk.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(308, 196);
+            this.btnExit.Location = new System.Drawing.Point(364, 213);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(113, 24);
             this.btnExit.TabIndex = 2;
@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 249);
+            this.ClientSize = new System.Drawing.Size(548, 249);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnOk);
