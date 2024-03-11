@@ -25,7 +25,7 @@ namespace BIBLIO
             InitializeComponent();
              h.ConStr = "server = 194.44.236.9; database = sqlipz23_1_gpya;" +
                  "user = sqlipz23_1_gpya; password = ipz23_gpya; charset = cp1251;";
-             dt = h.myfunDt("SELECT * FROM UserNames");
+             dt = h.myfunDt("SELECT * FROM Users");
 
 
              int kilkz = dt.Rows.Count;
@@ -34,7 +34,7 @@ namespace BIBLIO
              for(int i=0; i < kilkz; i++)
              {
                  matrix[i, 0] = dt.Rows[i].Field<int>("id").ToString();
-                 matrix[i, 1] = dt.Rows[i].Field<string>("UserName");
+                 matrix[i, 1] = dt.Rows[i].Field<string>("UsersName");
                  matrix[i, 2] = dt.Rows[i].Field<int>("Type").ToString();
                  matrix[i, 3] = dt.Rows[i].Field<string>("Password");
                  cbxUser.Items.Add(matrix[i, 1]);
