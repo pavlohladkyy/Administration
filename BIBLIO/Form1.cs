@@ -40,6 +40,12 @@ namespace BIBLIO
             frmOsoba f1 = new frmOsoba();
             f1.ShowDialog();
         }
+
+        private void каталогToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKatalog f2 = new frmKatalog();
+            f2.ShowDialog();
+        }
     }
 }
 

@@ -28,6 +28,7 @@ namespace BIBLIO
              dt = h.myfunDt("SELECT * FROM Users");
 
 
+
              int kilkz = dt.Rows.Count;
              matrix = new string[kilkz, 4];
 
@@ -88,7 +89,7 @@ namespace BIBLIO
             }
         }
 
-       
+        
     }
     static class h
     {
@@ -110,22 +111,7 @@ namespace BIBLIO
 
             return hash;
         }
-        public static string EncriptedPassword_SHA156(string s)
-        {
-           
-
-
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(s));
-                StringBuilder stringbuilder = new StringBuilder();
-                for(int i = 0; i < bytes.Length; i++)
-                {
-                    stringbuilder.Append(bytes[i].ToString("x2"));
-                }
-                return stringbuilder.ToString();
-            }
-        }
+       
         public static DataTable myfunDt(string commandString)
         {
             DataTable dt = new DataTable();

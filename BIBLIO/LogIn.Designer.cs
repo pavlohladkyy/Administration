@@ -43,6 +43,7 @@
             this.cbxUser.Name = "cbxUser";
             this.cbxUser.Size = new System.Drawing.Size(207, 24);
             this.cbxUser.TabIndex = 3;
+            
             // 
             // label1
             // 
@@ -106,7 +107,6 @@
             this.Controls.Add(this.cbxUser);
             this.Name = "LogIn";
             this.Text = "Авторизація";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 

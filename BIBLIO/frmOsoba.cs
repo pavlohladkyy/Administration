@@ -84,5 +84,7 @@ namespace BIBLIO
             btnFind.Checked = false;
             CancelFind();
         }
+
+       
     }
 }
