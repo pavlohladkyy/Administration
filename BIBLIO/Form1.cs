@@ -34,6 +34,12 @@ namespace BIBLIO
             Calculator calculatorForm = new Calculator();
             calculatorForm.ShowDialog();
         }
+
+        private void OpenTableOsoba_Click(object sender, EventArgs e)
+        {
+            frmOsoba f1 = new frmOsoba();
+            f1.ShowDialog();
+        }
     }
 }
 

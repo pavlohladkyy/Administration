@@ -36,6 +36,9 @@
             this.проПрограмуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проПрограмуToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenTableOsoba = new System.Windows.Forms.ToolStripMenuItem();
+            this.каталогToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.формулярToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +68,10 @@
             // 
             // таблиціБДToolStripMenuItem
             // 
+            this.таблиціБДToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OpenTableOsoba,
+            this.каталогToolStripMenuItem,
+            this.формулярToolStripMenuItem});
             this.таблиціБДToolStripMenuItem.Name = "таблиціБДToolStripMenuItem";
             this.таблиціБДToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
             this.таблиціБДToolStripMenuItem.Text = "Таблиці БД";
@@ -104,6 +111,28 @@
             this.вихідToolStripMenuItem.Text = "Вихід";
             this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             // 
+            // OpenTableOsoba
+            // 
+            this.OpenTableOsoba.Name = "OpenTableOsoba";
+            this.OpenTableOsoba.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D1)));
+            this.OpenTableOsoba.Size = new System.Drawing.Size(224, 26);
+            this.OpenTableOsoba.Text = "читачі";
+            this.OpenTableOsoba.Click += new System.EventHandler(this.OpenTableOsoba_Click);
+            // 
+            // каталогToolStripMenuItem
+            // 
+            this.каталогToolStripMenuItem.Name = "каталогToolStripMenuItem";
+            this.каталогToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D2)));
+            this.каталогToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.каталогToolStripMenuItem.Text = "каталог";
+            // 
+            // формулярToolStripMenuItem
+            // 
+            this.формулярToolStripMenuItem.Name = "формулярToolStripMenuItem";
+            this.формулярToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D3)));
+            this.формулярToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.формулярToolStripMenuItem.Text = "формуляр";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -114,7 +143,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Бібліотека";
-           // this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -132,6 +160,9 @@
         private System.Windows.Forms.ToolStripMenuItem проПрограмуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem проПрограмуToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem OpenTableOsoba;
+        private System.Windows.Forms.ToolStripMenuItem каталогToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem формулярToolStripMenuItem;
     }
 }
 

@@ -106,6 +106,7 @@
             this.Controls.Add(this.cbxUser);
             this.Name = "LogIn";
             this.Text = "Авторизація";
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
