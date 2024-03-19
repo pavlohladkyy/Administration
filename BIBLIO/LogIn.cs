@@ -93,10 +93,16 @@ namespace BIBLIO
     }
     static class h
     {
+        public static BindingSource bs1 { get; set; }
         public static string ConStr { get; set; }
         public static string typeUser { get; set; }
         public static string nameUser { get; set; }
-        public static BindingSource bs1 { get; set; }
+       
+
+        public static string curVal10 { get; set; }
+        public static string keyName { get; set; }
+
+
         public static string EncriptedPassword_MD5(string s)
         {
             if (string.Compare(s, "null", true) == 0)

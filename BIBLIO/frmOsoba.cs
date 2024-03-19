@@ -189,6 +189,27 @@ namespace BIBLIO
         {
             h.bs1.RemoveFilter();
         }
+
+        private void AddNew_Click(object sender, EventArgs e)
+        {
+            Table1_Insertcs addnew = new Table1_Insertcs();
+            addnew.ShowDialog();
+            h.bs1.DataSource = h.myfunDt("SELECT *from catalog_of_users ");
+            dataGridView1.DataSource = h.bs1;
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            h.curVal10 = dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString();
+            h.keyName = dataGridView1.Columns[0].Name;
+
+            delete f3  = new delete();
+            f3.ShowDialog();
+
+            h.bs1.DataSource = h.myfunDt("SELECT * from catalog_of_users");
+            dataGridView1.DataSource = h.bs1;
+        }
     }
 
 }
